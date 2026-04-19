@@ -1,1 +1,36 @@
-# Sobre o Projeto
+# DataFlow Medallion: Spark, Airflow & dbt
+This project is a data engineering pet project that demonstrates the design of a hybrid data platform (Cloud + Local) using widely adopted tools and practices:
+
+## AWS S3 as the Data Lake (Bronze layer).
+
+Spark for parallel batch processing and streaming (Bronze → Silver → Gold).
+
+Airflow for orchestration of batch pipelines and integration with dbt.
+
+dbt for SQL-based modeling and transformations in the Silver and Gold layers.
+
+Terraform for infrastructure provisioning as code.
+
+Snowflake (trial) or DuckDB as the Data Warehouse.
+
+Metabase/Power BI for data visualization.
+
+## 🎯 Purpose
+The project explores modern data architectures and best practices in ingestion, transformation, and visualization, with emphasis on:
+
+Parallelism: ingesting multiple APIs (e.g., Airbnb data from several European capitals).
+
+Near real-time streaming: open datasets such as weather, air quality, and UV radiation.
+
+Medallion architecture (Bronze, Silver, Gold): clear and scalable data organization.
+
+Infrastructure as Code: reproducibility and governance.
+
+🚀 Outcomes
+Documented batch and streaming pipelines.
+
+Near real-time dashboards or Dashboards enriched with different datasets.
+
+Minimal costs (< US$ 2/month) using sample datasets and small clusters.
+
+Complete documentation to serve as a reference for experimentation and testing.
