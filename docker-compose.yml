@@ -1,0 +1,13 @@
+services:
+  data-pipeline:
+    build:
+      context: "."
+      dockerfile: data-ingestion/Dockerfile
+    container_name: spark_extractor
+    volumes:
+      # Map the root 'local_data' folder to the container's '/app/data'
+      - ./local_data:/app/data
+    environment:
+      - SPARK_LOCAL_IP=127.0.0.1
+    stdin_open: true
+    tty: true
